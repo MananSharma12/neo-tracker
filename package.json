@@ -9,6 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@unovis/ts": "^1.4.4",
+    "@unovis/vue": "^1.4.4",
+    "axios": "^1.7.7",
+    "pinia": "^2.2.6",
     "vue": "^3.5.12"
   },
   "devDependencies": {
