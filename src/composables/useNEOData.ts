@@ -1,5 +1,5 @@
-import {useNEOStore} from '~/stores/neo.ts'
 import {ref, onMounted} from 'vue'
+import {useNEOStore} from '~/stores/neo.ts'
 
 export const useNEOData = () => {
     const neoStore = useNEOStore()
@@ -21,6 +21,6 @@ export const useNEOData = () => {
 
 function getStartDate(): string {
     const date = new Date()
-    date.setDate(date.getDate() - 6) // 1 week ago
+    date.setDate(date.getDate() - 6)
     return date.toISOString().slice(0, 10)
 }

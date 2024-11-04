@@ -5,6 +5,5 @@ export function formatDate(dateString: string): string {
 }
 
 export function formatDistance(distance: string): string {
-    // return formatDistanceUtil(0, parseFloat(distance), {unit: 'km'})
     return formatDistanceUtil(0, parseFloat(distance))
 }
