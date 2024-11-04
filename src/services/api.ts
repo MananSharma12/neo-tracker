@@ -18,6 +18,6 @@ export const fetchNEOFeed = async (startDate: string): Promise<NEOFeed> => {
 
 function getEndDate(startDate: string): string {
     const date = new Date(startDate)
-    date.setDate(date.getDate() + 6) // 1 week range
+    date.setDate(date.getDate() + 6)
     return date.toISOString().slice(0, 10)
 }

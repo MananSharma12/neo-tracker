@@ -13,7 +13,6 @@ const chartData = {
   y: [2,3,5]
 }
 
-
 // const chartData = computed(() => {
 //   return dailyNEOCounts.value.map(({ date:any, count: any, hazardousCount:any }) => ({
 //     date,
@@ -36,8 +35,8 @@ const chartData = {
       <VisXYContainer :data="chartData" :height="400">
 <!--        <VisBar :x="x" :y="y" label="Total NEOs" />-->
 <!--        <VisBar :x="x" :y="y2" label="Potentially Hazardous" />-->
-        <VisAxis type="x" />
-        <VisAxis type="y" />
+<!--        <VisAxis type="x" />-->
+<!--        <VisAxis type="y" />-->
       </VisXYContainer>
     </template>
   </BaseCard>

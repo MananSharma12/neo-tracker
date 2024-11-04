@@ -2,9 +2,9 @@
 import {computed} from 'vue'
 import {storeToRefs} from 'pinia'
 import {useNEOStore} from '~/stores/neo.ts'
+import {formatDate, formatDistance} from '~/utils/formatters.ts'
 import BaseCard from '~/components/shared/BaseCard.vue'
 import LoadingSpinner from '~/components/shared/LoadingSpinner.vue'
-import {formatDate, formatDistance} from '~/utils/formatters.ts'
 
 const neoStore = useNEOStore()
 const {loading, error} = storeToRefs(neoStore)

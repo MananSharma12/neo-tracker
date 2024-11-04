@@ -3,7 +3,8 @@ import {computed} from 'vue'
 import {storeToRefs} from 'pinia'
 import { VisXYContainer, VisLine } from '@unovis/vue'
 import { useNEOStore } from '~/stores/neo'
-import { formatDate } from '~/utils/formatters'
+// import { formatDate } from '~/utils/formatters'
+import BaseCard from "~/components/shared/BaseCard.vue";
 
 const neoStore = useNEOStore()
 const { dailyNEOCounts } = storeToRefs(neoStore)
@@ -30,8 +31,8 @@ const y2 = (d: any) => d['Potentially Hazardous']
       <VisXYContainer :data="chartData" :height="400">
         <VisLine :x="x" :y="y" label="Total NEOs" />
         <VisLine :x="x" :y="y2" label="Potentially Hazardous" />
-        <VisAxis type="x" :format="formatDate" />
-        <VisAxis type="y" />
+<!--        <VisAxis type="x" :format="formatDate" />-->
+<!--        <VisAxis type="y" />-->
       </VisXYContainer>
     </template>
   </BaseCard>
