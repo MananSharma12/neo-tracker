@@ -1,7 +1,7 @@
 import {defineStore} from "pinia"
 import {computed, ref} from 'vue'
-import {NEOFeed, NEOObject} from "../types/neo.ts"
-import { fetchNEOFeed } from '../services/api'
+import {NEOFeed} from "../types/neo"
+import {fetchNEOFeed} from '../services/api'
 
 export const useNEOStore = defineStore('neo', () => {
     const neoFeed = ref<NEOFeed | null>(null)

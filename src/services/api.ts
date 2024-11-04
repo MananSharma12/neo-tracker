@@ -1,9 +1,8 @@
 import axios from 'axios'
-import 'dotenv/config'
 import type { NEOFeed } from '../types/neo'
 
-const API_KEY = process.env.API_KEY
-const API_BASE_URL = process.env
+const API_KEY = import.meta.env.VITE_API_KEY
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL
 
 export const fetchNEOFeed = async (startDate: string): Promise<NEOFeed> => {
     const { data } = await axios.get<NEOFeed>(`${API_BASE_URL}/feed`, {

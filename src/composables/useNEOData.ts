@@ -1,4 +1,4 @@
-import {useNEOStore} from '../../stores/neo'
+import {useNEOStore} from '~/stores/neo.ts'
 import {ref, onMounted} from 'vue'
 
 export const useNEOData = () => {

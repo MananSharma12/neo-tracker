@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import {computed} from 'vue'
-import {useNEOStore} from '../../stores/neo'
-// import type { NEOObject } from '../../types/neo'
-import BaseCard from '../../components/shared/BaseCard.vue'
-import LoadingSpinner from '../../components/shared/LoadingSpinner.vue'
-import {formatDate, formatDistance} from '../../utils/formatters'
+import {storeToRefs} from 'pinia'
+import {useNEOStore} from '~/stores/neo.ts'
+import BaseCard from '~/components/shared/BaseCard.vue'
+import LoadingSpinner from '~/components/shared/LoadingSpinner.vue'
+import {formatDate, formatDistance} from '~/utils/formatters.ts'
 
 const neoStore = useNEOStore()
-const {neoFeed, loading, error} = storeToRefs(neoStore)
+const {loading, error} = storeToRefs(neoStore)
 
 const nearEarthObjects = computed(() => {
   return Object.values(neoStore.neoFeed?.near_earth_objects || {}).flat()
