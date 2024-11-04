@@ -29,7 +29,7 @@ const nearEarthObjects = computed(() => {
       <div v-else-if="nearEarthObjects.length === 0" class="text-gray-500">
         No Near-Earth Objects found.
       </div>
-      <div v-else class="space-y-4">
+      <div v-else class="max-h-96 overflow-auto space-y-4">
         <div
             v-for="neo in nearEarthObjects"
             :key="neo.id"
