@@ -33,7 +33,12 @@ const nearEarthObjects = computed(() => {
         <div
             v-for="neo in nearEarthObjects"
             :key="neo.id"
-            class="bg-white rounded-lg shadow-md p-4"
+            :class="[
+                'rounded-lg',
+                'shadow-md',
+                'p-4', 'mr-3',
+                neo.is_potentially_hazardous_asteroid ? 'bg-red-200' : 'bg-blue-200'
+            ]"
         >
           <h3 class="text-lg font-bold">{{ neo.name }}</h3>
           <p class="text-gray-600">
